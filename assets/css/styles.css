@@ -1,0 +1,201 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #181c24; /* warna gelap */
+  color: #f7f7f7;
+  line-height: 1.6;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+  background: #23283b; /* warna gelap */
+  color: #fff;
+}
+
+.profile {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  margin-bottom: 18px;
+  margin-top: 10px;
+  /* Crop setengah bawah */
+  object-position: top;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #b0bec5;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 32px;
+  background: #fff;
+  color: #2193b0;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(33,147,176,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn:hover {
+  background: #2193b0;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 18px; /* dari 24px jadi 18px */
+  font-size: 1.5rem;
+  color: #00c3ff;
+}
+
+/* Container untuk card agar center dan rapi */
+#projects {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 16px 16px; /* bawah dari 32px jadi 16px */
+}
+
+/* Card style */
+.card {
+  background: #23283b;
+  margin: 18px auto;
+  max-width: 500px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  padding: 24px 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #f7f7f7;
+  text-align: left;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+}
+.card h3 {
+  margin-top: 0;
+  color: #00c3ff;
+}
+.card p {
+  color: #b0bec5;
+  margin-bottom: 0;
+}
+
+/* Contact section styling */
+section:last-of-type {
+  background: #23283b;
+  margin: 24px 0 0 0;
+  padding: 14px 0 10px 0; /* padding atas & bawah lebih kecil */
+  border-radius: 18px;
+  max-width: 900px;      /* SAMA dengan #projects */
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+section:last-of-type p {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+section:last-of-type a {
+  color: #00c3ff;
+  word-break: break-all;
+}
+section:last-of-type .contact-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Animasi fade-in untuk hero (hapus animation, pakai transition saja) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s cubic-bezier(.5,1.5,.5,1), transform 0.9s cubic-bezier(.5,1.5,.5,1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Reveal on scroll untuk card project */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s cubic-bezier(.5,1.5,.5,1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 24px 0 16px 0;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    max-width: 95%;
+    padding: 18px 10px;
+  }
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+  .hero {
+    padding: 40px 5px 24px 5px;
+  }
+  #projects {
+    padding: 0 4px 24px 4px;
+  }
+  .card {
+    max-width: 98%;
+    padding: 16px 8px;
+  }
+}
+
+section {
+  background: #23283b;
+  margin: 24px 0 0 0;
+  padding: 14px 0 10px 0; /* padding atas & bawah lebih kecil */
+  border-radius: 18px;
+  max-width: 900px;      /* SAMA dengan #projects */
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+
+section p {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+section a {
+  color: #00c3ff;
+  word-break: break-all;
+}
+
+section .contact-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
